@@ -403,6 +403,7 @@ def generate_captcha(request_header, captcha_automation, api_key):
     print(
         "================================= GETTING CAPTCHA =================================================="
     )
+    beep(WARNING_BEEP_DURATION[0], WARNING_BEEP_DURATION[1])
     resp = requests.post(CAPTCHA_URL, headers=request_header)
     print(f'Captcha Response Code: {resp.status_code}')
 
